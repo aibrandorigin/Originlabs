@@ -1,0 +1,6 @@
+{
+  "name": "ORIGIN LABS | Big ideas. Real world.",
+  "description": "Origin Labs is an ecosystem that helps founders, inventors, engineers and startups turn ideas into market-ready products — prototyping, robotics, mechanical engineering, contract manufacturing, incubation, and investor access.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

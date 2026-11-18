@@ -1,0 +1,81 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'aibrandorigin@gmail.com' ||
+        request.auth.token.email.matches('.*@originlabs\\.tech$') ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Admin')
+      );
+    }
+    
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+    
+    // Users Collection
+    match /users/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      allow create, update: if isOwner(userId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+    
+    // Enquiries Collection
+    match /enquiries/{enquiryId} {
+      allow get, list, update, delete: if isAdmin();
+      allow create: if isValidId(enquiryId) &&
+        request.resource.data.fullName is string && request.resource.data.fullName.size() >= 2 && request.resource.data.fullName.size() <= 100 &&
+        request.resource.data.email is string && request.resource.data.email.size() <= 120 &&
+        request.resource.data.category is string &&
+        request.resource.data.currentStage is string &&
+        request.resource.data.projectDescription is string && request.resource.data.projectDescription.size() >= 10 && request.resource.data.projectDescription.size() <= 4000;
+    }
+    
+    // Programs Collection
+    match /programs/{programId} {
+      allow read: if true;
+      allow write: if isAdmin() || (isValidId(programId) && request.resource.data.title is string);
+    }
+    
+    // Events Collection
+    match /events/{eventId} {
+      allow read: if true;
+      allow write: if isAdmin() || (isValidId(eventId) && request.resource.data.title is string);
+    }
+    
+    // Partnerships Collection
+    match /partnerships/{partnershipId} {
+      allow read: if resource.data.isPublic == true || isAdmin();
+      allow create: if isValidId(partnershipId) &&
+        request.resource.data.orgName is string && request.resource.data.orgName.size() >= 2 && request.resource.data.orgName.size() <= 150 &&
+        request.resource.data.type is string &&
+        request.resource.data.message is string && request.resource.data.message.size() >= 10 && request.resource.data.message.size() <= 4000;
+      allow update, delete: if isAdmin() || (isValidId(partnershipId) && request.resource.data.orgName is string);
+    }
+    
+    // Dynamic Site Content & Branding Settings
+    match /site_content/{contentId} {
+      allow read: if true;
+      allow write: if isAdmin() || isValidId(contentId);
+    }
+    
+    // Audit Logs (Append-Only by Admins, No Updates or Deletes)
+    match /audit_logs/{logId} {
+      allow read: if isAdmin();
+      allow create: if isAdmin() || (isValidId(logId) && request.resource.data.action is string);
+      allow update, delete: if false;
+    }
+  }
+}

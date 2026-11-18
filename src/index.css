@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal-950: #060709;
+  --color-charcoal-900: #0a0c10;
+  --color-charcoal-850: #0f1217;
+  --color-charcoal-800: #141820;
+  --color-charcoal-750: #1a202a;
+  --color-charcoal-700: #222a36;
+  --color-charcoal-600: #2f3a4b;
+  
+  /* Authentic Origin Labs Warm Solar & Ember Brand Palette */
+  --color-orange-accent: #ff5500;
+  --color-orange-hover: #ff6b1a;
+  --color-orange-amber: #ffa200;
+  --color-orange-flame: #ff3700;
+  --color-orange-subtle: rgba(255, 85, 0, 0.08);
+  --color-orange-glow: rgba(255, 85, 0, 0.35);
+
+  /* Legacy mappings mapped to new flame/ember theme */
+  --color-lime-accent: #ff5500;
+  --color-lime-hover: #ff6b1a;
+  --color-lime-subtle: rgba(255, 85, 0, 0.08);
+  --color-lime-glow: rgba(255, 85, 0, 0.35);
+
+  --color-silver-50: #f8fafc;
+  --color-silver-100: #f1f5f9;
+  --color-silver-200: #e2e8f0;
+  --color-silver-300: #cbd5e1;
+  --color-silver-400: #94a3b8;
+  --color-silver-500: #64748b;
+
+  --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #07080a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Precision Grid Texture */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 85, 0, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Brushed Metal / Titanium Surfaces with warm ember undertone */
+.surface-metallic {
+  background: linear-gradient(135deg, rgba(26, 32, 42, 0.85) 0%, rgba(14, 18, 24, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+}
+
+.surface-metallic-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.surface-metallic-hover:hover {
+  border-color: rgba(255, 85, 0, 0.5);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.7), 0 0 20px -2px rgba(255, 85, 0, 0.25), inset 0 1px 0 0 rgba(255, 85, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Radiant Ember Glow Utilities */
+.glow-orange {
+  box-shadow: 0 0 25px -4px rgba(255, 85, 0, 0.45);
+}
+
+.glow-ember {
+  box-shadow: 0 0 30px -2px rgba(255, 85, 0, 0.55), 0 0 10px rgba(255, 162, 0, 0.3);
+}
+
+.text-orange-shadow {
+  text-shadow: 0 0 18px rgba(255, 85, 0, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2430;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}
+
+/* Marquee continuous scroll */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
+}

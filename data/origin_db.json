@@ -1,0 +1,235 @@
+{
+  "enquiries": [
+    {
+      "fullName": "Elena Vance",
+      "email": "elena@blackmesa.tech",
+      "phone": "+1-415-555-0142",
+      "orgName": "Vance Robotics",
+      "category": "Robotics and hardware",
+      "currentStage": "Functional Working Prototype",
+      "projectDescription": "Developing an autonomous agricultural harvesting manipulator with carbon fiber arm and custom embedded motor drivers.",
+      "supportNeeded": "Custom multi-layer PCBA redesign, thermal testing, and pilot production batch of 50 units.",
+      "preferredContactMethod": "Email",
+      "consent": true,
+      "id": "enq_1790773860942_fdfdab",
+      "status": "New",
+      "assignedTo": null,
+      "internalNotes": [],
+      "createdAt": "2026-09-30T13:11:00.942Z",
+      "updatedAt": "2026-09-30T13:11:00.942Z"
+    },
+    {
+      "fullName": "Dr. Elena Rostova",
+      "email": "elena@neurobots.io",
+      "phone": "+65 9123 4567",
+      "category": "Robotics and hardware",
+      "currentStage": "Prototype",
+      "projectDescription": "Testing neural actuator precision interface for collaborative robotics.",
+      "supportNeeded": "High-precision PCBA and DFMA review",
+      "preferredContactMethod": "Email",
+      "consent": true,
+      "id": "enq_1791001810661_4336ee",
+      "status": "New",
+      "assignedTo": null,
+      "internalNotes": [],
+      "createdAt": "2026-10-03T04:30:10.662Z",
+      "updatedAt": "2026-10-03T04:30:10.662Z"
+    },
+    {
+      "fullName": "Dr. Elena Rostova",
+      "email": "elena@neurobots.io",
+      "phone": "+65 9123 4567",
+      "orgName": "",
+      "category": "Robotics and hardware",
+      "currentStage": "Prototype",
+      "projectDescription": "Testing neural actuator precision interface for collaborative robotics.",
+      "supportNeeded": "High-precision PCBA and DFMA review",
+      "preferredContactMethod": "Email",
+      "consent": true,
+      "id": "enq_1791001951687_690c85",
+      "status": "New",
+      "assignedTo": null,
+      "internalNotes": [],
+      "createdAt": "2026-10-03T04:32:31.687Z",
+      "updatedAt": "2026-10-03T04:32:31.687Z"
+    },
+    {
+      "fullName": "Marcus Vance",
+      "email": "marcus@aerodrone.tech",
+      "phone": "+65 8234 5678",
+      "orgName": "",
+      "category": "Robotics and hardware",
+      "currentStage": "Prototype",
+      "projectDescription": "Autonomous telemetry avionics payload test",
+      "supportNeeded": "DFMA and precision CNC milling",
+      "preferredContactMethod": "Email",
+      "consent": true,
+      "id": "enq_1791437498664_9dd384",
+      "status": "New",
+      "assignedTo": null,
+      "internalNotes": [],
+      "createdAt": "2026-10-08T05:31:38.664Z",
+      "updatedAt": "2026-10-08T05:31:38.664Z"
+    }
+  ],
+  "programs": [],
+  "events": [],
+  "partnerships": [],
+  "siteContent": {
+    "heroHeadline": "Big ideas.\nReal world.",
+    "heroSupporting": "From the first sketch to the factory floor.",
+    "heroPrimaryCta": "Build With Us",
+    "heroSecondaryCta": "Explore the Ecosystem",
+    "visionHeadline": "An ecosystem where ambitious ideas become useful products, sustainable ventures and meaningful opportunities.",
+    "visionDescription": "Origin Labs brings together engineering rigor, advanced prototyping machinery, manufacturing supply chains, investor readiness, and collaborative builder cohorts.",
+    "marqueeItems": [
+      "RAPID PROTOTYPING",
+      "ROBOTICS & EMBEDDED SYSTEMS",
+      "MECHANICAL DESIGN & CAD",
+      "BULK CONTRACT MANUFACTURING",
+      "DFMA & PILOT RUNS",
+      "FOUNDER INCUBATION",
+      "HARDWARE INVESTMENT READINESS",
+      "SUPPLIER SOURCING",
+      "SYSTEM INTEGRATION",
+      "COHORT SUMMITS"
+    ],
+    "contactEmail": "",
+    "contactPhone": "",
+    "contactAddress": "",
+    "socialLinks": {
+      "linkedin": "",
+      "twitter": "",
+      "github": "",
+      "youtube": ""
+    },
+    "seoTitle": "ORIGIN LABS | Big ideas. Real world.",
+    "seoDescription": "Origin Labs is an ecosystem that helps founders, inventors, engineers and startups turn ideas into market-ready products.",
+    "logoUrl": "",
+    "logoAlt": "Origin Labs",
+    "logoHeight": 36,
+    "logoSubtitle": "Hardware • Robotics • Prototyping",
+    "updatedAt": "2026-10-12T04:38:22.089Z"
+  },
+  "staffUsers": [
+    {
+      "id": "usr_admin_01",
+      "email": "admin@originlabs.tech",
+      "name": "Origin Admin",
+      "role": "Admin",
+      "passwordHash": "72174af327ab990f7fecb5b20bff7f8bad4f67f96ad1aa4223cb67f09af987439468cbbdf8bb8f6cb9bfa6799ea4a02ffcca28c65e6ed55994c5dcb67ab9a81a",
+      "salt": "f97c9563478d732c46edd21da8b58316",
+      "createdAt": "2026-09-30T13:10:42.600Z"
+    },
+    {
+      "id": "usr_editor_01",
+      "email": "editor@originlabs.tech",
+      "name": "Content Lead",
+      "role": "Content Editor",
+      "passwordHash": "f12b1ca63399d16cac2a53726e7808e45f704fdeee301e33ff532c7ed75a710249c0220621333da8f3b4d1a581678c713b64d6b5c3481aca54c3c37c6c4d4716",
+      "salt": "a9f2bc8884e1d22815c06f569b3a5996",
+      "createdAt": "2026-09-30T13:10:42.600Z"
+    },
+    {
+      "id": "usr_mgr_01",
+      "email": "manager@originlabs.tech",
+      "name": "Enquiries Lead",
+      "role": "Enquiry Manager",
+      "passwordHash": "221a2f24057f837aa67464467d53f8a53f8ced16304f22028a50a6892d2c0b6ab2c9b12628da682cca576ec85abde684af5b3c2aa0408f87f1c5de0ad594c411",
+      "salt": "c1147a9417f2c3379709f96cc720d8a9",
+      "createdAt": "2026-09-30T13:10:42.600Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_init",
+      "timestamp": "2026-09-30T13:10:42.600Z",
+      "actorEmail": "system",
+      "actorRole": "System",
+      "action": "INITIALIZE_SYSTEM",
+      "entity": "Database",
+      "details": "Origin Labs persistent database initialized."
+    },
+    {
+      "id": "log_1790773860942_79c6",
+      "timestamp": "2026-09-30T13:11:00.942Z",
+      "actorEmail": "public_user",
+      "actorRole": "Public",
+      "action": "SUBMIT_ENQUIRY",
+      "entity": "Enquiry",
+      "details": "New enquiry #enq_1790773860942_fdfdab from Elena Vance (Robotics and hardware)"
+    },
+    {
+      "id": "log_1790773878366_c49e",
+      "timestamp": "2026-09-30T13:11:18.366Z",
+      "actorEmail": "admin@originlabs.tech",
+      "actorRole": "Admin",
+      "action": "STAFF_LOGIN",
+      "entity": "Auth",
+      "details": "Staff user admin@originlabs.tech (Admin) logged in."
+    },
+    {
+      "id": "log_1791001432941_c4e4",
+      "timestamp": "2026-10-03T04:23:52.941Z",
+      "actorEmail": "admin@originlabs.tech",
+      "actorRole": "Admin",
+      "action": "STAFF_LOGIN",
+      "entity": "Auth",
+      "details": "Staff user admin@originlabs.tech (Admin) logged in."
+    },
+    {
+      "id": "log_1791001951690_2c44",
+      "timestamp": "2026-10-03T04:32:31.690Z",
+      "actorEmail": "public_user",
+      "actorRole": "Public",
+      "action": "SUBMIT_ENQUIRY",
+      "entity": "Enquiry",
+      "details": "New enquiry #enq_1791001951687_690c85 from Dr. Elena Rostova (Robotics and hardware)"
+    },
+    {
+      "id": "log_1791437498666_f182",
+      "timestamp": "2026-10-08T05:31:38.666Z",
+      "actorEmail": "public_user",
+      "actorRole": "Public",
+      "action": "SUBMIT_ENQUIRY",
+      "entity": "Enquiry",
+      "details": "New enquiry #enq_1791437498664_9dd384 from Marcus Vance (Robotics and hardware)"
+    },
+    {
+      "id": "log_1791780204426_0f4c",
+      "timestamp": "2026-10-12T04:43:24.426Z",
+      "actorEmail": "admin@originlabs.tech",
+      "actorRole": "Admin",
+      "action": "STAFF_LOGIN",
+      "entity": "Auth",
+      "details": "Staff user admin@originlabs.tech (Admin) logged in."
+    },
+    {
+      "id": "log_1791780215614_4fee",
+      "timestamp": "2026-10-12T04:43:35.614Z",
+      "actorEmail": "admin@originlabs.tech",
+      "actorRole": "Admin",
+      "action": "UPDATE_LOGO",
+      "entity": "SiteContent",
+      "details": "Updated brand logo in database (custom: false, height: 38px)"
+    },
+    {
+      "id": "log_1791780231322_093c",
+      "timestamp": "2026-10-12T04:43:51.322Z",
+      "actorEmail": "admin@originlabs.tech",
+      "actorRole": "Admin",
+      "action": "UPDATE_LOGO",
+      "entity": "SiteContent",
+      "details": "Updated brand logo in database (custom: true, height: 40px)"
+    },
+    {
+      "id": "log_1791780235398_6ee8",
+      "timestamp": "2026-10-12T04:43:55.398Z",
+      "actorEmail": "admin@originlabs.tech",
+      "actorRole": "Admin",
+      "action": "UPDATE_LOGO",
+      "entity": "SiteContent",
+      "details": "Updated brand logo in database (custom: false, height: 36px)"
+    }
+  ]
+}
